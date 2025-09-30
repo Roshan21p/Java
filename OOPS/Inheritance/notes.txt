@@ -1,0 +1,107 @@
+1. Single-Level Inheritance
+
+Definition:
+A child class inherits directly from one parent class.
+
+Rules:
+1.Only one parent class.
+2.Use extends keyword.
+3.Private members of parent are not inherited.
+4.Child can add its own members.
+5.Child can access public/protected members of parent.
+
+Example:
+
+class Shape {
+    String color;
+    void displayColor() {
+        System.out.println("Color: " + color);
+    }
+}
+
+class Triangle extends Shape {
+    int base, height;
+    void area() {
+        System.out.println("Area: " + (0.5 * base * height));
+    }
+}
+
+
+2. Multi-Level Inheritance
+
+Definition:
+A chain of inheritance where a class inherits from a child class of another class (Grandparent → Parent → Child).
+
+Rules:
+1.Form a chain: Grandparent → Parent → Child.
+2.Use extends keyword at each level.
+3.Private members are not inherited.
+4.Child can reuse all accessible members of ancestors.
+
+Example:
+
+class Grandparent {
+    void message() { System.out.println("Grandparent"); }
+}
+
+class Parent extends Grandparent {
+    void message() { System.out.println("Parent"); }
+}
+
+class Child extends Parent {
+    void message() { System.out.println("Child"); }
+}
+
+
+
+3. Hierarchical Inheritance
+
+Definition:
+Multiple child classes inherit from one common parent class.
+
+Rules:
+1.One parent → multiple children.
+2.Each child uses extends keyword.
+3.Private members of parent cannot be accessed directly.
+4.Each child can add its own members.
+
+Example:
+
+class Shape {
+    String color;
+}
+
+class Triangle extends Shape {
+    int base, height;
+}
+
+class Circle extends Shape {
+    int radius;
+}
+
+
+
+4. Hybrid Inheritance (via Interfaces)
+
+Definition:
+Combination of two or more types of inheritance.
+(Java does not allow hybrid inheritance with classes alone; use interfaces.)
+
+Rules:
+1.Use interfaces to combine multiple inheritance.
+2.Child class implements multiple interfaces.
+
+Example:
+
+interface Drawable {
+    void draw();
+}
+
+interface Colorable {
+    void color();
+}
+
+class Shape implements Drawable, Colorable {
+    public void draw() { System.out.println("Drawing shape"); }
+    public void color() { System.out.println("Coloring shape"); }
+}
