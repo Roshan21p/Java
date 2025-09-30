@@ -10,7 +10,7 @@ public class prevGreaterElement {
         res[0] = -1;
         st.push(0);
         for(int i=1;i<n;i++) {
-            while (st.size() > 0 && arr[st.peek()] < arr[i]) {
+            while (st.size() > 0 && arr[st.peek()] <= arr[i]) {
                 st.pop();
             }
             if(st.size()==0) res[i] = -1;
@@ -29,7 +29,7 @@ public class prevGreaterElement {
         st.push(n-1);
         for(int i=n-2;i>=0;i--) {
             res[i] = -1;
-            while (st.size() > 0 && arr[st.peek()] < arr[i]) {
+            while (st.size() > 0 && arr[st.peek()] <= arr[i]) {
                 res[st.peek()] = arr[i];
                 st.pop();
             }

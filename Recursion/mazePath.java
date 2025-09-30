@@ -15,6 +15,17 @@ public class mazePath {
         int downWays = countMaze1(r-1,c);
         return rightWays + downWays;
     }
+
+    public static int countMaze3(int m,int n,int r,int c,String ans){
+        if(m==r && n==c) {
+            System.out.println(ans);
+            return 1;
+        }
+        if(m>r || n>c) return 0;
+        // move right and down
+        return countMaze3(m, n + 1, r, c, ans + "R") +
+                countMaze3(m + 1, n, r, c, ans + "D");
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of row : ");
@@ -23,5 +34,7 @@ public class mazePath {
         int c = sc.nextInt();
         System.out.println("The number of paths in maze : "+countMaze(1,1,r,c));
         System.out.println("The number of paths in maze : "+countMaze1(r,c));
+        System.out.println("The number of paths in maze : "+countMaze3(1,1,r,c,""));
+
     }
 }

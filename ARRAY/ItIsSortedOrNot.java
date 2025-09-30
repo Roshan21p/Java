@@ -41,6 +41,5 @@ public class ItIsSortedOrNot {
         int[] ans = smallestAndLargestElement(arr);
         System.out.println("smallest: " +ans[0]);
         System.out.println("largest: " +ans[1]);
-
     }
 }

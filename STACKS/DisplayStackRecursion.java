@@ -29,7 +29,8 @@ public class DisplayStackRecursion {
         st.push(4);
         st.push(5);
         int top = 8;
-       // displayRec(st);
+       displayRec(st);
         InsertAtBottom(st,top);
+        displayRec(st);
     }
 }

@@ -2,7 +2,8 @@ package STACKS;
 
 import java.util.Stack;
 
-public class nextGreaterElement {
+public class
+nextGreaterElement {
     public static int[] nextGreaterElement(int[] arr){
         Stack<Integer> st = new Stack<>();
         int n = arr.length;

@@ -2,7 +2,8 @@ package Recursion;
 
 import java.util.Scanner;
 
-public class GCD {
+public class
+GCD {
     static int gcd(int x,int y){
         if(y == 0) return x;
 

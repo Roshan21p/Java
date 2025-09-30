@@ -28,6 +28,7 @@ public class inversionCount {
         while(i< a.length && j< b.length){
             if(a[i] > b[j]){
                 count += (a.length-i);
+                System.out.println("a "+a[i]+" b "+b[j]+" count "+count+ " length "+b.length);
                 j++;
             }
             else i++;
@@ -50,10 +51,11 @@ public class inversionCount {
         merge(a,b,arr);
     }
     public static void main(String[] args) {
-        int[] arr = {8,2,5,3,1,4};
-        displayArr(arr);
-        mergeSort(arr);
-        displayArr(arr);
+        int[] arr1 = {8,5,2,3,1,4};
+        int[] arr = {3 ,6, 4 ,1 ,2, 5};
+        displayArr(arr1);
+        mergeSort(arr1);
+        displayArr(arr1);
         System.out.println("Inversion Count : "+count);
     }
 }

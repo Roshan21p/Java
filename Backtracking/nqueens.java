@@ -41,14 +41,13 @@ public class nqueens {
     public static void nQueen(char[][] board,int row){
         int n = board.length;
         if(row==n){
-//            for(int i=0;i<n;i++){
-//                for(int j=0;j<n;j++){
-//                    System.out.print(board[i][j]);
-//                }
-//                System.out.println();
-//            }
-//            System.out.println();
-            count++;
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    System.out.print(board[i][j]);
+                }
+                System.out.println();
+            }
+            System.out.println();
             return;
         }
         for(int j=0;j<n;j++){
@@ -60,7 +59,7 @@ public class nqueens {
         }
     }
     public static void main(String[] args) {
-        int n = 8;
+        int n = 4;
         char[][] board= new char[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
@@ -68,6 +67,6 @@ public class nqueens {
             }
         }
         nQueen(board,0);
-        System.out.println(count);
+       // System.out.println(count);
     }
 }

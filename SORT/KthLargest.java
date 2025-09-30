@@ -44,12 +44,12 @@ public class KthLargest {
         int n = arr.length;
         if(st > end) return;
         if(st==end){
-            System.out.println("Kth smallest element : "+arr[k-1]);
+            System.out.println("Kth largest element : "+arr[k-1]);
             return;
         }
         int pi = partition(arr,st,end);
         if(k-1==pi) {
-            System.out.println("Kth smallest element : "+arr[k-1]);
+            System.out.println("Kth largest element : "+arr[k-1]);
             return;
         } else if(k-1<pi) quickselect(arr,st,pi-1,k);
         else quickselect(arr,pi+1,end,k);

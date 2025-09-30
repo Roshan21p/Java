@@ -54,6 +54,24 @@ public class practice {
         }
         void deleteAt(int idx){
             Node temp = head;
+            if(idx<0 || idx>size){
+                System.out.println("wrong input");
+            } else if(idx==0) {
+                head = head.next;
+                size--;
+                return;
+            } else if(idx == size-1){
+                for(int i=0;i<idx-1;i++) temp = temp.next;
+                temp.next = temp.next.next;
+                tail = temp;
+                size--;
+                return;
+            }
+            else {
+                for(int i=0;i<idx-1;i++) temp = temp.next;
+                temp.next = temp.next.next;
+                size--;
+            }
         }
         int getAt(int idx){
             Node temp = head;

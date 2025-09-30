@@ -2,7 +2,8 @@ package Recursion;
 
 import java.util.Scanner;
 
-public class PreInPost {
+public class
+PreInPost {
     static void pip(int n){
         if(n==0) return;
         System.out.print(n+" ");

@@ -30,8 +30,8 @@ public class reverseArrayList {
         list.add(10);
 
         System.out.println("Original List " + list);
-        Collections.reverse(list);
-//        reverseList(list);
+     //   Collections.reverse(list);
+        reverseList(list);
         System.out.println("Reversed list " + list);
         Collections.sort(list);
         System.out.println("ascending order " + list);

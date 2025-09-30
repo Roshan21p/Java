@@ -2,7 +2,7 @@ package Backtracking;
 
 public class maximumKnights {
     static int maxKnights = -1;
-    static int number = 5;
+    static int number = 18;
     public static boolean isSafe(char[][] board,int row,int col){
         int n = board.length;
         int i,j;
@@ -35,7 +35,7 @@ public class maximumKnights {
     public static void nKnight(char[][] board,int row,int col,int num){
         int n = board.length;
         if(row==n){
-            if(num==number){
+            if(num>=number){
                 for(int i=0;i<n;i++){
                     for(int j=0;j<n;j++){
                         System.out.print(board[i][j]+" ");
@@ -58,7 +58,7 @@ public class maximumKnights {
             else nKnight(board,row+1,0,num);
     }
     public static void main(String[] args) {
-        int n = 3;
+        int n = 6;
         char[][] board = new char[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){

@@ -60,7 +60,7 @@ public class kthSmallest {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-        System.out.println("Enter the kth largest element :");
+        System.out.println("Enter the kth smallest element :");
         int k = sc.nextInt();
         System.out.println("Array elements");
         displayArr(arr);

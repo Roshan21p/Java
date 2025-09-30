@@ -15,7 +15,7 @@ public class TargetArray {
 
 
 
-    // FOR LAStINDEX =>  return index of target if target present in array, otherwise retuen -1;
+    // FOR LAStINDEX =>  return index of target if target present in array, otherwise return -1;
     static int findLastIndex(int[] arr,int n,int target,int idx){
         // base case
         if(idx >= n) return -1;

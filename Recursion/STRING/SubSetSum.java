@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SubSetSum {
     static void subsetSum(int[] arr,int n,int idx, int currSum){
         if(idx == n){
-            System.out.println(currSum);
+            System.out.print(currSum+" ");
             return;
         }
         // curr idx + currSum

@@ -20,7 +20,7 @@ public class maxValue {
         for(int i=0;i<a.length();i++){
             if(a.charAt(i) != '0') return a.substring(i);
         }
-        return a;
+        return "";
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,5 +30,6 @@ public class maxValue {
             maxS = max(maxS,arr[i]);
         }
         System.out.println(maxS);
+
      }
 }

@@ -21,6 +21,6 @@ public class stairPath {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of n : ");
         int n = sc.nextInt();
-        System.out.println("The total number of ways : "+countStair2(n));
+        System.out.println("The total number of ways : "+countStair(n));
     }
 }

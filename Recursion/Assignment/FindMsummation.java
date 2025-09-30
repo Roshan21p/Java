@@ -21,13 +21,10 @@ public class FindMsummation {
         return sumofn(sum);
     }
     public static int sumofn(int n){
-        int ans = 0;
         if(n == 1){
-            ans++;
-            return ans;
+            return 1;
         }
-        ans += n + sumofn(n-1);
-        return ans;
+        return n + sumofn(n-1);
     }
 
     public static void main(String[] args) {

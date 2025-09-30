@@ -7,9 +7,9 @@ public class printWaveForm {
                        {7,8,9}
                       };
         int n = arr.length,m = arr[0].length;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < m; i++) {
             if(i % 2 == 0 ){
-                for (int j = 0; j < m; j++) {
+                for (int j = 0; j < n; j++) {
                     System.out.print(arr[i][j]+" ");
                 }
             } else {

@@ -11,7 +11,7 @@ public class prevSmallerElement {
         st.push(0);
         for(int i=1;i<n;i++){
             res[i] = -1;
-            while(st.size()>0 && arr[st.peek()] > arr[i]){
+            while(st.size()>0 && arr[st.peek()] >= arr[i]){
                 st.pop();
             }
             if(st.size()==0) res[i] = -1;
@@ -39,7 +39,7 @@ public class prevSmallerElement {
         return res;
     }
     public static void main(String[] args) {
-        int[] arr = {5,2,4,6,3,5};
+        int[] arr = {1,3,2,1,8,6,3,4};
 
         for(int i=0;i< arr.length;i++){
             System.out.print(arr[i]+" ");

@@ -23,8 +23,10 @@ public class RotateKsteps1 {
         k = k % n;
         // reverse n-k-1 elements
         reverseArray(arr,0,n-k-1);
+        printArray(arr);
         // reverse n-k elements
         reverseArray(arr,n-k,n-1);
+        printArray(arr);
         // reverse entire array
         reverseArray(arr,0,n-1);
         return arr;

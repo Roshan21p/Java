@@ -1,10 +1,9 @@
 package BinaryTree;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Traversals {
+    static List<Integer> levelMax = new ArrayList<>();
     public static class  Pair{
         Node node;
         int level;
@@ -32,39 +31,62 @@ public class Traversals {
         postOrder(root.right);
         System.out.print(root.val+" ");
     }
-//    private static void queueLevel(Node root){
-//        Queue<Node> q = new LinkedList<>();
-//        //Pair t= new Pair(root,0);
-//        if(root != null) q.add(root);
-//        System.out.println(q.size());
-//        while(q.size() > 0){
-//            Node front = q.remove();
-//            System.out.print(front.val+" ");
-//            if(front.left != null) q.add(front.left);
-//            if(front.right != null) q.add(front.right);
-//        }
-//    }
+    private static void queueLevel1(Node root){
+        Queue<Node> q = new LinkedList<>();
+        //Pair t= new Pair(root,0);
+        if(root != null) q.add(root);
+        while(q.size() > 0){
+            Node front = q.remove();
+            System.out.print(front.val+" ");
+            if(front.left != null) q.add(front.left);
+            if(front.right != null) q.add(front.right);
+        }
+    }
     private static void queueLevel(Node root){
         int prevLevel = 0;
         Queue<Pair> q = new LinkedList<>();
         //Pair t= new Pair(root,0);
         if(root != null) q.add(new Pair(root,0));
+        int max = -10000;
         while(q.size() > 0) {
             Pair front = q.remove();
             Node temp = front.node;
             int level = front.level;
+
             if (level != prevLevel) {
+                max = -100000;
                 System.out.println();
                 prevLevel++;
             }
+            if(level == prevLevel) {
+               max = Math.max(max, temp.val);
+
+               if(levelMax.size() <= level){
+                   levelMax.add(max);
+               } else {
+                   levelMax.set(level,max);
+               }
+           }
             System.out.print(temp.val + " ");
             if (temp.left != null) q.add(new Pair(temp.left, level + 1));
             if (temp.right != null) q.add(new Pair(temp.right, level + 1));
         }
     }
 
+    private static void levelOrder(Node root){
+        Queue<Node> q = new LinkedList<>();
+        if(root!=null) q.add(root);
+        while(q.size()>0){
+            Node front = q.poll();
+            System.out.print(front+" ");
+            if(front.left != null) q.add(front.left);
+            if(front.right != null) q.add(front.right);
+        }
+        System.out.println();
+    }
+
     private static void nThLevel(Node root,int level,int n){
-        if(root==null) return;
+        if(root==null || level>n) return;
         if(level==n) System.out.print(root.val+" ");
         nThLevel(root.left,level+1,n);
         nThLevel(root.right,level+1,n);
@@ -92,6 +114,9 @@ public class Traversals {
         System.out.print("Post-Order traversal is : ");
         postOrder(a);
         System.out.println();
+        System.out.print("Level order Traversal using normal Queue is : ");
+        queueLevel1(a);
+        System.out.println();
         System.out.println("Level order Traversal using Queue is : ");
         queueLevel(a);
         System.out.println();
@@ -99,6 +124,10 @@ public class Traversals {
         for(int x=0;x<4;x++){
             nThLevel(a,0,x);
             System.out.println();
+        }
+        System.out.print("Level max value : ");
+        for (int x : levelMax) {
+            System.out.print(x + " ");
         }
     }
 }

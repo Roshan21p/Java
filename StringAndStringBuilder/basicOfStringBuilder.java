@@ -38,7 +38,7 @@ public class basicOfStringBuilder {
 
         // append()
         StringBuilder e = new StringBuilder("Hello");
-        System.out.println(e);
+        System.out.println(e+" " +e.reverse());
         e.append("Roshan");
         System.out.println(e);
 

@@ -20,6 +20,6 @@ public class SumOfSeries {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of n is :");
         int n = sc.nextInt();
-        System.out.println("The sum of series is : " +SumSeries1(n));
+        System.out.println("The sum of series is : " +SumSeries(n));
     }
 }

@@ -1,11 +1,10 @@
 package STACKS;
 
-
 public class ArrayImplentation {
     public static class Stack{
-        private int[] arr = new int[5];
-        private int idx = 0;
-        void push(int x){
+        public int[] arr = new int[5];
+        public int idx = 0;
+         public void push(int x){
             if(isFull()){
                 System.out.println("Stack is Full");
                 return;
@@ -13,14 +12,14 @@ public class ArrayImplentation {
             arr[idx] = x;
             idx++;
         }
-        int peek(){
+        public int peek(){
             if(idx == 0){
                 System.out.println("Stack is Empty!");
                 return -1;
             }
             return arr[idx-1];
         }
-       int pop(){
+       public int pop(){
             if(idx == 0){
                 System.out.println("Stack is Empty!");
                 return -1;
@@ -30,13 +29,13 @@ public class ArrayImplentation {
             idx--;
             return top;
         }
-        void display(){
+        public void display(){
             for(int i=0;i<idx;i++){
                 System.out.print(arr[i]+ " ");
             }
             System.out.println();
         }
-        int size(){
+        public int size(){
             return idx;
         }
         boolean isEmpty(){

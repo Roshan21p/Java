@@ -14,7 +14,7 @@ public class PostToInfix {
             } else {
                 String v2 = val.pop();
                 String v1 = val.pop();
-                String t = v1 + v2 + ch;
+                String t = "(" + v1 + ch + v2  +")" ;
                 val.push(t);
             }
         }

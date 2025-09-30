@@ -20,7 +20,7 @@ public class reverseEachWordInSentence {
         int n = sb.length();
         int i = 0, j = 0;
         while(j<n){
-            if(sb.charAt(j) !=' ') j++;
+            if(sb.charAt(j) != ' ') j++;
             else {
                 reverse(sb,i,j-1);
                 i = j+1;

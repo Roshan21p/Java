@@ -20,8 +20,8 @@ public class fibonacciSeries {
         System.out.println("Enter the number :");
         int n = sc.nextInt();
         System.out.println("The fibonacci series is :");
-       for (int i = 0; i <= n; i++) {
-            System.out.println(fib(i));
+       for (int i = 0; i < n; i++) {
+            System.out.print(fib(i)+" ");
     }
     }
 }

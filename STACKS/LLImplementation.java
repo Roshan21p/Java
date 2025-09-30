@@ -40,14 +40,14 @@ public class LLImplementation {
                 System.out.print(h.val+" ");
             }
             void display(){
-                displayRec(head);
+               // displayRec(head);
+
+                Node temp = head;
+                while(temp != null){
+                    System.out.println(temp.val+" ");
+                    temp = temp.next;
+                }
                 System.out.println();
-//                Node temp = head;
-//                while(temp != null){
-//                    System.out.println(temp.val+" ");
-//                    temp = temp.next;
-//                }
-//                System.out.println();
             }
             int size(){
                 return size++;
@@ -65,10 +65,11 @@ public class LLImplementation {
        st.display(); // 4 5
         st.push(1);
         st.display(); // 4 5 1
-      System.out.print("The peek value is : " +st.peek());
-//        System.out.println(st.size());
-//        st.pop();
-//        st.display(); // 4 5
+      System.out.println("The peek value is : " +st.peek());
+        System.out.println(st.size());
+        st.pop();
+        st.pop();
+        st.display(); // 4 5
 //        System.out.println(st.size());
 //        st.push(67);
 //        st.push(12);
