@@ -27,7 +27,7 @@ public class balancedBrackets {
         for(int i=0;i<n;i++){
             if(str.charAt(i)=='(') st.push(str.charAt(i));
             else{
-                if(st.size()==0) count++;
+               if(st.size()==0) count--;
                 else if(st.peek()=='(') st.pop();
             }
         }

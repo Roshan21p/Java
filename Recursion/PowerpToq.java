@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PowerpToq {
 
     static int p(int p, int q){
-        // TC => O(logq) SC => O(1)
+        // TC => O(logn) SC => O(1)
         if(q == 0){
             return 1;
         }

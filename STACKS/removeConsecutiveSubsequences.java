@@ -20,8 +20,7 @@ public class removeConsecutiveSubsequences {
         return res;
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,2,3,10,10,10,4,4,4,5,7,7,7
-        };
+        int[] arr = {1,2,2,3,10,10,10,4,4,4,5,7,7,7};
         int[] res = remove(arr);
         for(int i=0;i< res.length;i++){
             System.out.print(res[i]+" ");

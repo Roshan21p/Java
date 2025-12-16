@@ -11,8 +11,9 @@ class Student implements Comparable<Student>{
         this.perc = perc;
         this.name = name;
     }
+    @Override
     public int compareTo(Student s){
-        return this.name.charAt(0) - s.name.charAt(0);
+        return this.rno - s.rno;
     }
 }
 public class customComparator {

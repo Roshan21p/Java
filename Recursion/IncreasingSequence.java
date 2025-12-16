@@ -18,11 +18,11 @@ public class IncreasingSequence {
         for(int i=start;i<=n;i++){
             sequence.add(i);
             generateSequences(n, k, i + 1, sequence);
-            System.out.println(sequence.remove(sequence.size() - 1));
+            sequence.remove(sequence.size() - 1);
         }
     }
         public static void main(String[] args){
-        int n = 3, k = 2;
+        int n = 6, k = 4;
         generateSequences(n, k, 1, new ArrayList<>());
     }
 }

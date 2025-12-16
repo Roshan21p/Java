@@ -24,6 +24,6 @@ public class DecToBin {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number : ");
         int n  = sc.nextInt();
-        System.out.println(find(n));
+        System.out.println(findIterative(n));
     }
 }

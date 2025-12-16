@@ -17,10 +17,9 @@ public class subsetSum {
             else return 0;
         }
         int skip = subset2(i+1,arr,target);
-       // if(target-arr[i]<0) return skip;  // Only valid for +ve numbers
+        if(target-arr[i]<0) return skip;  // Only valid for +ve numbers
         int pick = subset2(i+1,arr,target-arr[i]);
         return (pick+skip);
-       // return Math.max(pick , skip);
     }
     private static boolean subset1(int i, int[] arr, int target,int[][] dp){
         if(i==arr.length) {

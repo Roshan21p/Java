@@ -25,10 +25,10 @@ public class EvenOdd {
                 left++;
                 right--;
             }
-            if(arr[left] % 2 == 0){
+            else if(arr[left] % 2 == 0){
                 left++;
             }
-            if(arr[right] % 2 == 1){
+            else if(arr[right] % 2 == 1){
                 right--;
             }
         }

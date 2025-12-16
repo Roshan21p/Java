@@ -55,8 +55,8 @@ public class PaintersPartition {
 
     }
     public static void main(String[] args) {
-        int A = 10, B = 1;
-        int[] C = {1,8,11,3};
+        int A = 2, B = 5;
+        int[] C = {1,11};
         System.out.println("minimum time required to paint all boards : "+paint(A,B,C));
     }
 }

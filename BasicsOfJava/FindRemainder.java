@@ -10,7 +10,7 @@ public class FindRemainder {
         System.out.println("Enter divisor:");
         int b = sc.nextInt();
         int q = a/b;
-        // Divisor = dividend*quotient + remainder
+        // dividend  = Divisor*quotient + remainder
         int r = a - (b*q);
         System.out.println("The remiander when "+a+" is dividend by "+b+" is :"+r);
     }

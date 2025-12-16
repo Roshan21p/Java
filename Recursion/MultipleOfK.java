@@ -15,7 +15,6 @@ public class MultipleOfK {
         //self work
         System.out.println(n * k);
 
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

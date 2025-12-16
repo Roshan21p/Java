@@ -25,8 +25,8 @@ public class basicOfString {
         System.out.println(str.indexOf("R"));
 
         String str1 = "abc";
-        String str2 = "def";
-        System.out.println(str1.compareTo(str2)); // a-d -> 97-100
+        String str2 = "aef";
+        System.out.println("Compare To "+str1.compareTo(str2)); // a-d -> 97-100
 
         //contains() and startsWith
         System.out.println(str.contains("Hello"));  // true

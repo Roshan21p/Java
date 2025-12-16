@@ -58,15 +58,15 @@ public class Traversals {
                 System.out.println();
                 prevLevel++;
             }
-            if(level == prevLevel) {
-               max = Math.max(max, temp.val);
-
-               if(levelMax.size() <= level){
-                   levelMax.add(max);
-               } else {
-                   levelMax.set(level,max);
-               }
-           }
+//            if(level == prevLevel) {
+//               max = Math.max(max, temp.val);
+//
+//               if(levelMax.size() <= level){
+//                   levelMax.add(max);
+//               } else {
+//                   levelMax.set(level,max);
+//               }
+//           }
             System.out.print(temp.val + " ");
             if (temp.left != null) q.add(new Pair(temp.left, level + 1));
             if (temp.right != null) q.add(new Pair(temp.right, level + 1));

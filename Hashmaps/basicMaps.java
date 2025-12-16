@@ -36,6 +36,5 @@ public class basicMaps {
         for(Object pair : map.entrySet()){
             System.out.println(pair);
         }
-
     }
 }

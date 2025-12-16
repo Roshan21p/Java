@@ -17,12 +17,12 @@ public class ReverseString {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the string : ");
+       // System.out.println("Enter the string : ");
        // String s = sc.nextLine();
         String s = "roshan";
-        StringBuilder a = new StringBuilder(s);
+        StringBuilder a = new StringBuilder();
         System.out.println(a.reverse());
-//        int idx = 0;
+       int idx = 0;
 //        String rev = reverse(s,idx);
 //        if(rev.equals(s)){
 //            System.out.printf("%s is Pallindrome",s);
@@ -31,7 +31,7 @@ public class ReverseString {
 //            System.out.printf("%s is not Pallindrome",s);
 //        }
 //        System.out.println("");
-//       // System.out.println("Reverse string is : "+reverse(s,idx));
+      System.out.println("Reverse string is : "+reverse(s,idx));
 //        System.out.println("Reverse string is : "+reverse1(s));
     }
 }

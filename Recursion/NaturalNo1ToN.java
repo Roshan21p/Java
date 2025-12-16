@@ -7,7 +7,7 @@ public class NaturalNo1ToN {
         // base case
         if(n == 1){
             System.out.println(1);
-            return ;
+            return;
         }
 
         // Self work
